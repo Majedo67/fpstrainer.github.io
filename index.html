@@ -2,101 +2,265 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FPStrainer | Gaming Studio</title>
-<style>
-* { box-sizing: border-box; }
-body {
-  margin: 0;
-  background: #080d18;
-  color: white;
-  font-family: Arial, sans-serif;
-}
-header {
-  padding: 22px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #101a2d;
-}
-.logo { font-size: 25px; font-weight: 900; }
-.logo span { color: #28aaff; }
-nav a {
-  color: white;
-  text-decoration: none;
-  margin-left: 15px;
-  font-size: 13px;
-}
-.hero {
-  text-align: center;
-  padding: 110px 20px;
-  background: radial-gradient(circle, #123e70, #080d18 70%);
-}
-.hero h1 { font-size: 48px; margin: 0; }
-.hero h1 span { color: #28aaff; }
-.hero p { color: #b6c7df; }
-.btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 14px 28px;
-  background: #168cff;
-  color: white;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-}
-section { padding: 55px 20px; text-align: center; }
-section h2 { color: #28aaff; }
-.card {
-  background: #111e33;
-  border: 1px solid #203a5c;
-  padding: 25px;
-  border-radius: 14px;
-  max-width: 500px;
-  margin: 20px auto;
-}
-footer {
-  text-align: center;
-  padding: 25px;
-  color: #8296b4;
-  background: #101a2d;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FPStrainer | Independent Game Studio</title>
+  <meta name="description" content="FPStrainer is an independent game studio creating exciting gaming experiences.">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #070b16;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 20px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(7, 11, 22, 0.92);
+      backdrop-filter: blur(12px);
+      z-index: 10;
+      border-bottom: 1px solid #14243d;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: 900;
+      color: #20d9ff;
+      letter-spacing: 2px;
+    }
+
+    nav a {
+      color: #ddd;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #20d9ff;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 100px 20px;
+      background:
+        radial-gradient(ellipse at center, #10365c 0%, #070b16 65%);
+    }
+
+    .hero h1 {
+      font-size: clamp(45px, 9vw, 90px);
+      font-weight: 900;
+      color: #20d9ff;
+      text-shadow: 0 0 30px #008cff;
+    }
+
+    .hero p {
+      color: #bdcde0;
+      font-size: 19px;
+      margin: 20px 0 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #13bfe8;
+      color: #06101b;
+      padding: 15px 30px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #fff;
+      transform: translateY(-4px);
+    }
+
+    section {
+      padding: 90px 8%;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 40px;
+      color: #20d9ff;
+    }
+
+    .about {
+      text-align: center;
+      max-width: 750px;
+      margin: auto;
+      color: #b9c8dc;
+      line-height: 1.8;
+      font-size: 17px;
+    }
+
+    .games {
+      background: #0b1222;
+    }
+
+    .game-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 25px;
+      max-width: 950px;
+      margin: auto;
+    }
+
+    .game-card {
+      background: #101d32;
+      border: 1px solid #16466a;
+      border-radius: 15px;
+      padding: 35px 25px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .game-card:hover {
+      transform: translateY(-8px);
+      border-color: #20d9ff;
+      box-shadow: 0 0 25px #008cff30;
+    }
+
+    .game-card h3 {
+      color: #20d9ff;
+      font-size: 23px;
+      margin-bottom: 15px;
+    }
+
+    .game-card p {
+      color: #b9c8dc;
+      line-height: 1.6;
+    }
+
+    .future {
+      text-align: center;
+    }
+
+    .future p {
+      color: #b9c8dc;
+      line-height: 1.8;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #050811;
+      color: #71849c;
+      border-top: 1px solid #14243d;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 16px 5%;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav a {
+        margin: 0 8px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<header>
-  <div class="logo">FPS<span>trainer</span></div>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#games">Games</a>
-  </nav>
-</header>
+  <header>
+    <div class="logo">FPSTRAINER</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#games">Games</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-<div class="hero">
-  <h1>WELCOME TO <span>FPSTRAINER</span></h1>
-  <p>Independent Game Development Studio</p>
-  <a href="#games" class="btn">Explore Games</a>
-</div>
+  <section class="hero" id="home">
+    <h1>FPSTRAINER</h1>
+    <p>Independent Game Studio. Unlimited Possibilities.</p>
+    <a href="#games" class="btn">EXPLORE OUR GAMES</a>
+  </section>
 
-<section id="about">
-  <h2>ABOUT US</h2>
-  <p>We are FPStrainer, an independent gaming studio<br>
-  building creative gaming experiences.</p>
-</section>
+  <section id="about">
+    <h2 class="section-title">ABOUT US</h2>
+    <p class="about">
+      Welcome to FPStrainer! We are an independent game studio
+      focused on creating exciting 2D and 3D gaming experiences.
+      Our goal is to build fun, creative, and unforgettable games.
+    </p>
+  </section>
 
-<section id="games">
-  <h2>OUR GAMES</h2>
-  <div class="card">
-    <h3>Coming Soon</h3>
-    <p>Our first game is in development.</p>
-  </div>
-</section>
+  <section class="games" id="games">
+    <h2 class="section-title">OUR GAMES</h2>
 
-<footer>
-  © 2026 FPStrainer Studio
-</footer>
+    <div class="game-grid">
+
+      <div class="game-card">
+        <h3>FPS Shooter Game</h3>
+        <p>
+          An exciting first-person shooter project.
+          More information coming soon!
+        </p>
+      </div>
+
+      <div class="game-card">
+        <h3>More Games</h3>
+        <p>
+          More exciting projects are planned for the future.
+          Stay tuned!
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="future">
+    <h2 class="section-title">OUR FUTURE</h2>
+    <p>
+      We are working toward building bigger gaming experiences,
+      expanding to more platforms, and exploring future PC
+      and console releases.
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">CONTACT</h2>
+    <p class="about">
+      Want to follow our development?
+      Visit our GitHub page!
+      <br><br>
+      <a class="btn" href="https://github.com/majedo67">
+        VISIT GITHUB
+      </a>
+    </p>
+  </section>
+
+  <footer>
+    © 2026 FPStrainer. All rights reserved.
+    <br><br>
+    Independent Game Studio
+  </footer>
 
 </body>
 </html>
